@@ -1,16 +1,22 @@
 using UnityEngine;
 
-public class Mover : MonoBehaviour
+namespace TopDown.Movement
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [RequireComponent(typeof(Rigidbody2D))]
+    public class Mover : MonoBehaviour
     {
-        
-    }
+        [SerializeField] private float movementSpeed;
+        private Rigidbody2D body;
+        protected Vector3 currentInput;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        private void Awake()
+        {
+            body = GetComponent<Rigidbody2D>();
+        }
+
+        private void FixedUpdate()
+        {
+            body.linearVelocity = currentInput * (movementSpeed * Time.fixedDeltaTime);
+        }
     }
 }
