@@ -2,7 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
+  serializedVersion: 3
   tags: []
   layers:
   - Default
@@ -38,6 +38,21 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Ground
+    uniqueID: 4169805403
+    locked: 0
+  - name: Props
+    uniqueID: 1634749353
+    locked: 0
+  - name: Obstacles
+    uniqueID: 2070836401
+    locked: 0
+  - name: Player
+    uniqueID: 3895129745
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
+  m_RenderingLayers:
+  - Default
+  m_MigratedRenderPipelines: []
